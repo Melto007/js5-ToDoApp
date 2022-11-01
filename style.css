@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #FF9F4A;
+    --background-color2: #FF3C83;
+    --blue-color: #3944F7;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #758283;
+    --red-color: #E21717;
+    --light-dark-white-color: #CAD5E2;
+}
+
+body {
+    background: linear-gradient(var(--background-color), var(--background-color2));
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDo-container {
+    background-color: var(--white-color);
+    width: 30rem;
+    height: auto;
+    padding: 0.8rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0.7rem 0.7rem 1rem var(--black-color);
+}
+
+.add-text {
+    text-align: center;
+    position: relative;
+    padding: 2rem 0;
+    z-index: 1;
+}
+
+.textbox-todo {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    border: 0.1rem solid var(--light-dark-white-color);
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+}
+
+.add, .editTask {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: var(--blue-color);
+    cursor: pointer;
+    color: var(--white-color);
+    position: absolute;
+    right: 38%;
+    top: 110%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.editTask {
+    background-color: var(--background-color2);
+}
+
+.todo-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.todo-paragraph p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    width: 80%;
+    word-wrap: break-word;
+    font-weight: 700;
+    position: relative;
+}
+
+.strickParagraph {
+    transition: all 0.5s;
+    text-decoration: line-through;
+    color: var(--gray-color);
+}
+
+.delete {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--white-color);
+    cursor: pointer;
+}
+
+.editbtn {
+    border: none;
+    background-color: var(--red-color);
+    padding: 0.3rem 0.3rem;
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 500px) {
+    .toDo-container {
+        width: 25rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .toDo-container {
+        width: 25rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .toDo-container {
+        width: 20rem;
+    }
+
+    .todo-paragraph p {
+        width: 75%;
+    }
+
+    .add {
+        right: 30%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .toDo-container {
+        width: 18rem;
+    }
+
+    .todo-paragraph p {
+        width: 70%;
+    }
+
+    .add {
+        right: 28%;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .toDo-container {
+        width: 15rem;
+    }
+
+    .todo-paragraph p {
+        width: 70%;
+    }
+
+    .add {
+        right: 28%;
+    }
+}
